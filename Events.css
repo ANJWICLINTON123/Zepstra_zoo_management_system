@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(235, 240, 245);  
+}
+
+h1.Header{
+    color:  #045f16;
+    margin-left: 20px;
+    text-decoration: underline;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+h1.Header2{
+    float: left;
+margin-top: 4%;
+ margin-bottom: 7%;
+}
+img.EventImage{
+    margin-right: 300%;
+}
+
+.Container_Events p{
+    text-align: left;
+    line-height: 22px;
+}
+
+div.Containerbg{
+    background-color: #fff;
+    padding: 2px 30px 10px 20px;
+}
