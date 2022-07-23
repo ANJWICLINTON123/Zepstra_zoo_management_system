@@ -27,5 +27,35 @@ img.EventImage{
 
 div.Containerbg{
     background-color: #fff;
-    padding: 2px 30px 10px 20px;
+    box-shadow: 5px 5px 5px rgb(106, 108, 109);
+}
+
+
+
+@media screen and (max-width: 680px) {
+   
+h1.Header{
+    margin-left: 40px;
+    margin-top: 13%;
+}
+h1.Header2{
+font-size: 27px;
+margin-left: 8%;
+margin-top: 4%;
+margin-bottom: 12%;
+}
+img.EventImage{
+    margin-right: 30%;
+}
+
+.Container_Events p{
+    text-align: left;
+    line-height: 22px;
+    margin-left: 7%;
+}
+div.Containerbg{
+    margin-top: 10%;
+    margin-left: 5%;
+    padding-top: 9%;
+}
 }
