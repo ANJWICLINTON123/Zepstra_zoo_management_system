@@ -1,0 +1,39 @@
+
+  input[type=text]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 5%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+button.submit_button{
+    text-align: center;
+    color: #fff;
+    padding: 10px 200px 10px 200px;
+    background-color: #045f16;
+    border-color: #045f16;
+    margin-left: 95px;
+    font-size: 15px;
+    font-weight: 600;
+}
+h1.foreign_ticket{
+    color: #045f16;
+    margin-top: 5%;
+}
+h6{
+    color: #f2f2f2;
+}
+  /* ############# Mobile View ################# */
+@media screen and (max-width: 680px) {
+    input[type=text]{
+        width: 70%;
+      }
+      button.submit_button{
+        text-align: center;
+        padding: 10px 150px 10px 147px;
+    }
+  }
