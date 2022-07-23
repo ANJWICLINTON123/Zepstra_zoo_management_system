@@ -1,0 +1,108 @@
+body{
+    background-color: rgb(235, 240, 245);  
+}
+
+.contactus h1{
+    color:#045f16;
+    margin: 5% 0 2% 10%;
+    text-decoration: underline;
+}
+.contactus p{
+    margin-left: 10%;
+    text-align: left;
+    line-height: 22px;
+    margin-bottom: 3%;
+}
+div.contactus_form{
+    padding-top: 4%;
+}
+img .icon{
+    padding-top: 100%;
+   margin-bottom: 55%;
+}
+
+.contactus_form h1{
+    text-decoration: none;
+    color: black;
+    margin-right: 4%;
+}
+
+h1.callCenter{
+    margin-top: -5%;
+}
+
+.contactus_form p{
+    margin-left: 35%;
+}
+
+h1.Center{
+    margin-right: 18%;
+}
+
+img.contacticon{
+    margin-right: 20%;
+}
+
+div.SubmitForm{
+    margin-left: 20%;
+    background-color: #fff;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+input[type=text]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 5%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=Email]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 5%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=date]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 5%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+button.submit_button{
+    text-align: center;
+    color: #fff;
+    padding: 10px 135px 10px 135px;
+    background-color: #045f16;
+    border-color: #045f16;
+    margin-left: 65px;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+textarea.textarea{
+    margin-left: 13%;
+    width: 50%;
+    margin-bottom: 4%;
+}
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
