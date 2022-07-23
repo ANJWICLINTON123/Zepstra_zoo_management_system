@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="Homepage.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="Gallery.css">
 </head>
 <body>
@@ -19,14 +19,14 @@
           <ul class="navbar-nav">
             
             <li><button type="button" class="Login_button">login</button></li>
-            <li><a href="">Register</a></li>
-            <li><a href="">Contact Us</a></li>
-            <li><a href="">Events</a></li>
-            <li><a href="">Vacancies</a></li>
-            <li><a href="">Book Tickets</a></li>
-            <li><a href="">Animals</a></li>
-            <li><a href="">Gallery</a></li>
-            <li><a href="">Home</a></li>
+            <li><a href="Registration.php">Register</a></li>
+            <li><a href="ContactUs.php">Contact Us</a></li>
+            <li><a href="Events.php">Events</a></li>
+            <li><a href="Vacancies.php">Vacancies</a></li>
+            <li><a href="BookTicket.php">Book Tickets</a></li>
+            <li><a href="Animal.php">Animals</a></li>
+            <li><a href="Gallery.php">Gallery</a></li>
+            <li><a href="index.php">Home</a></li>
          </ul>
     </nav>
  <!-- ########################## Side Manu ################################### -->
@@ -43,6 +43,7 @@
     <li><button type="button" class="sidebarLogin_button">login</button></li>
 </div>
 
+<!-- ########################## Gallery ################################### -->
 <div class="gallery_h1">
     <h1 style="color:  #045f16; margin-left: 2%;"> Gallery</h1>
 </div>
