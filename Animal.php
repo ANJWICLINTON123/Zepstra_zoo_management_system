@@ -64,7 +64,7 @@
       <a target="_blank" href="img_forest.jpg">
         <img src="image/panda.jpg" alt="Forest" width="600" height="400">
       </a>
-      <div class="desc">Add a description of the image here</div>
+      <div class="desc">Add a description of the image </div>
     </div>
   </div>
   
@@ -82,7 +82,7 @@
       <a target="_blank" href="img_mountains.jpg">
         <img src="image/bear.jpg" alt="Mountains" width="600" height="400">
       </a>
-      <div class="desc">Add a description of the image here</div>
+      <div class="desc">Add a description of the image</div>
     </div>
   </div>
 
