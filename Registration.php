@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="BookTicket.css">
+    <link rel="stylesheet" href="Ragistration.css">
+    
 </head>
 <body>
       <!-- ########################## MAIN MANU ################################### -->
@@ -42,51 +43,22 @@
     <a href="">Register</a>
     <li><button type="button" class="sidebarLogin_button">login</button></li>
 </div>
-
-<h1 class="ticket">Tickets</h1>
-
-<table id="customers">
-  <tr>
-    <th>Ticket group</th>
-    <th>Prices</th>
-  </tr>
-  <tr>
-    <td>Cameroon Ticket</td>
-    <td>20000frs</td>
-  </tr>
-  <tr>
-    <td>Foreigner Ticket</td>
-    <td>100000frs</td>
-  </tr>
-</table>
-<br><br>
-<!-- ########################## form ########################## -->
-
-<div class="tickets">
-    <div class="row">
-        <div class="col-md-6">
-            <h1 class="foreign_ticket"> Foreign Ticket</h1>
-            <form action="/action_page.php">
-                <label for="">Name</label>  <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
-                <label for="">Price</label>  <input type="number" id="price" name="price" placeholder="Place your Price.."><br><br>
-                <label for="">Date</label>  <input type="date" id="date" name="lastname" placeholder="mm/dd/yyyy.."><br><br>
-                <button class="submit_button">Book Ticket</button>
-            </form>
-        </div>
-        <div class="col-md-6">
-            <h1 class="foreign_ticket"> Foreign Ticket</h1>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+    <h1 class="foreign_ticket">Ragister</h1>
             <form action="">
                 <label for="">Name</label>  <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
-                <label for="">Price</label>  <input type="number" id="price" name="price" placeholder="Place your Price.."><br><br>
-                <label for="">Date</label>  <input type="date" id="date" name="lastname" placeholder="mm/dd/yyyy.."><br><br>
-                <button class="submit_button">Book Ticket</button>
+                <label for="">Email</label>  <input type="text" id="Email" name="Email" placeholder="Your email.."><br><br>
+                <label for="">Address</label>  <input type="text" id="Address" name="address" placeholder="Your address.."><br><br>
+                <button class="submit_button">Ragister</button>
             </form>
-        </div>
     </div>
+    <div class="col-sm-2"></div>
 </div>
 
 
-<br>
+
 <footer class="container_footer">
     <div class="row">
       <div class="col-md-8 Our_footer">
