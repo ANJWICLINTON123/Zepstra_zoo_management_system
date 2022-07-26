@@ -47,9 +47,6 @@
 
 <!-- ########################## OPen and Close javascrip code ################################### -->
 
-
-
-
 <script>
     function openSlideMenu(){
           document.getElementById('side-menu').style.width = '250px';
