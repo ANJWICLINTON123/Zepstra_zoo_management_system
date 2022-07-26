@@ -31,15 +31,15 @@
     </nav>
  <!-- ########################## Side Manu ################################### -->
 <div id="side-menu" class="side-nav">
-    <a href="#" class="btn-close" onclick="closeSlidemenu()">&times;</a>
-    <a href="">Home</a>
-    <a href="">Gallery</a>
-    <a href="">Animals</a>
-    <a href="">Book Tickets</a>
-    <a href="">Vacancies</a>
-    <a href="">Events</a>
-    <a href="">Contact Us</a>
-    <a href="">Register</a>
+<a href="#" class="btn-close" onclick="closeSlidemenu()">&times;</a>
+    <a href="index.php">Home</a>
+    <a href="Gallery.php">Gallery</a>
+    <a href="Animal.php">Animals</a>
+    <a href="BookTicket.php">Book Tickets</a>
+    <a href="Vacancies.php">Vacancies</a>
+    <a href="Events.php">Events</a>
+    <a href="ContactUS.php">Contact Us</a>
+    <a href="Registration.php">Register</a>
     <li><button type="button" class="sidebarLogin_button">login</button></li>
 </div>
 
