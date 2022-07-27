@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="Gallery.css">
     <link rel="stylesheet" href="Animal.css">
+    <link rel="stylesheet" href="animal2.css">
+
 </head>
 <body>
       <!-- ########################## MAIN MANU ################################### -->
