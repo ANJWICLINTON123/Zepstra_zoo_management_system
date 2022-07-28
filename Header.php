@@ -19,7 +19,7 @@
        </span>
           <ul class="navbar-nav">
             
-            <li><button type="button" class="Login_button">login</button></li>
+          <li><a class = "login" href="login.php">login</a></li>
             <li><a href="Registration.php">Register</a></li>
             <li><a href="ContactUs.php">Contact Us</a></li>
             <li><a href="Events.php">Events</a></li>
