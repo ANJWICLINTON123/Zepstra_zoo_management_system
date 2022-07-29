@@ -26,6 +26,11 @@ h1.ticket{
     margin-left: 5%;
     color: #045f16;
 }
+h1.ticketh1{
+  margin-left: 29rem;
+  color: #045f16;
+  margin-bottom: 3rem;
+}
 /* ############# Form for ticket ################# */
 /* input[type=text], select {
     width: 100%;

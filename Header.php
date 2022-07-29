@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"  href="index.css">
     <script src="Homepage.js"></script>
 </head>
@@ -22,6 +22,7 @@
           <li><a class = "login" href="login.php">login</a></li>
             <li><a href="Registration.php">Register</a></li>
             <li><a href="ContactUs.php">Contact Us</a></li>
+            <li><a href="admin.php">Admin</a></li>
             <li><a href="Events.php">Events</a></li>
             <li><a href="Vacancies.php">Vacancies</a></li>
             <li><a href="BookTicket.php">Book Tickets</a></li>

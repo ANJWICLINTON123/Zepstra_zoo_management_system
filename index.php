@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"  href="index.css">
     <script src="Homepage.js"></script>
 </head>
@@ -13,6 +13,7 @@
   
    <!-- ########################## MAIN MANU ################################### -->
    <?php include 'header.php';?>
+
 <!-- ########################## Welcome image after main manu ################################### -->
 <div class="background_image">
   <span class="text_on_image">
