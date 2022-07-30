@@ -11,7 +11,7 @@
 </head>
 <body>
       <!-- ########################## MAIN MANU ################################### -->
-      <?php include 'Header.php';?>
+      <?php include ('Header.php');?>
 
 <h1 class="ticket">Tickets</h1>
 
@@ -55,6 +55,6 @@
     </div>
 </div>
 <br>
-<?php include 'Footer.php';?>
+<?php include ('Footer.php');?>
 </body>
 </html>

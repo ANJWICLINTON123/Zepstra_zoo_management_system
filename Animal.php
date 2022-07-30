@@ -14,7 +14,7 @@
 </head>
 <body>
       <!-- ########################## MAIN MANU ################################### -->
-      <?php include 'Header.php';?>
+      <?php include ('Header.php');?>
 <!-- ########################## Gallery ################################### -->
 <div class="gallery_h1">
     <h1> Birds</h1>
@@ -318,6 +318,6 @@
 </div>
 
 
-<?php include 'Footer.php';?>
+<?php include ('Footer.php');?>
 </body>
 </html>
