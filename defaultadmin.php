@@ -10,7 +10,7 @@
   <title>Dashboard</title>
 </head>
 <body>
-  <?php include "header.php"?>
+  <?php include "Header.php"?>
   <input type="checkbox" id ="nav-toggle">
   <div class="sidebar">
     <div class="sidebar-brand">

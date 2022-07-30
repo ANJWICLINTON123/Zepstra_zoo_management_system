@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-<?php include "header.php"?>
+<?php include "Header.php"?>
 <?php include "defaultadmin.php"?>
 
 <form action="/action_page.php">

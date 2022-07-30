@@ -11,7 +11,7 @@
 </head>
 <body>
       <!-- ########################## MAIN MANU ################################### -->
-      <?php include 'header.php';?>
+      <?php include 'Header.php';?>
 <!-- ########################## Gallery ################################### -->
 <div class="gallery_h1">
     <h1 style="color:  #045f16; margin-left: 2%;"> Gallery</h1>
@@ -140,6 +140,6 @@
   </div>
 </div>
 <!-- ####################### footer ############# -->
-<?php include 'footer.php';?>
+<?php include 'Footer.php';?>
 </body>
 </html>

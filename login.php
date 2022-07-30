@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- ##################### header ######################## -->
-    <?php include "header.php" ?>
+    <?php include "Header.php" ?>
 
 
     <form action="/action_page.php">
@@ -36,6 +36,6 @@
 
 
 
-    <?php include "footer.php" ?>
+    <?php include "Footer.php" ?>
 </body>
 </html>

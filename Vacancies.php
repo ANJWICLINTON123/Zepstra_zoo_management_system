@@ -11,7 +11,7 @@
 </head>
 <body>
       <!-- ########################## MAIN MANU ################################### -->
-      <?php include 'header.php';?>
+      <?php include 'Header.php';?>
       <div class="vacancies_h1">
         <h1>Vacancies</h1>
         <p>The following jobs are avialable</p>
@@ -51,6 +51,6 @@
 
       
 <!-- #################### footer ###################### -->
-<?php include 'footer.php';?>
+<?php include 'Footer.php';?>
 </body>
 </html>

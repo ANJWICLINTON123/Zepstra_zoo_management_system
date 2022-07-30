@@ -11,7 +11,7 @@
 </head>
 <body>
       <!-- ########################## MAIN MANU ################################### -->
-      <?php include 'header.php';?>
+      <?php include 'Header.php';?>
  <!-- ########################## Event (Adventure) ################################### -->
 
 <h1 class = Header> Events</h1>
@@ -34,6 +34,6 @@
 </div>
 
 <!-- ############################ footer #################### -->
-<?php include 'footer.php';?>
+<?php include 'Footer.php';?>
 </body>
 </html>

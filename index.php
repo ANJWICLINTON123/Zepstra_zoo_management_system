@@ -12,7 +12,7 @@
 <body>
   
    <!-- ########################## MAIN MANU ################################### -->
-   <?php include 'header.php';?>
+   <?php include 'Header.php';?>
 
 <!-- ########################## Welcome image after main manu ################################### -->
 <div class="background_image">
@@ -122,6 +122,6 @@
 </div>
 
 <!-- #################### footer ###################### -->
-<?php include 'footer.php';?>
+<?php include 'Footer.php';?>
 </body>
 </html>

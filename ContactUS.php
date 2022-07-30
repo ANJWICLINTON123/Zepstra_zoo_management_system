@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="contact1.css">
-    <!-- <link rel="stylesheet" href="ContactUS.css"> -->
 </head>
 <body>
       <!-- ########################## MAIN MANU ################################### -->
-      <?php include 'header.php';?>
+      <?php include 'Header.php';?>
 
 
       <div class="contactus">
@@ -74,6 +73,6 @@
 </div>
 
 
-<?php include 'footer.php';?>
+<?php include 'Footer.php';?>
 </body>
 </html>
