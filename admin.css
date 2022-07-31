@@ -16,7 +16,8 @@
 }
 
 .sidebar{
-    margin-top: 80px;
+   margin-top: 80px;
+   margin-top: -w;
    width: 345px;
    position: fixed;
    left: 0;

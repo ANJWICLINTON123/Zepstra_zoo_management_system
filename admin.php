@@ -17,15 +17,15 @@
       <h2><span class="lab la-accusoft"></span><span>Accusoft</span></h2>
     </div>
     <div class="sidebar-menu">
-      <ul>
+    <ul>
         <li>
-          <a href="" class="active"><span class = "las la-igloo"></span><span>Dashboard</span></a>
+          <a href="admin.php" class="active"><span class = "las la-igloo"></span><span>Dashboard</span></a>
         </li>
         <li>
           <a href="admin-animal-details.php"><span class = "las la-igloo"></span><span>Animal details</span></a>
         </li>
         <li>
-          <a href=""><span class = "las la-igloo"></span><span>Manage Ticket</span></a>
+          <a href="admin-management-ticket.php"><span class = "las la-igloo"></span><span>Manage Ticket</span></a>
         </li>
         <li>
           <a href=""><span class = "las la-igloo"></span><span>Cameroon Ticket</span></a>
@@ -34,10 +34,10 @@
           <a href=""><span class = "las la-igloo"></span><span>Foreign Ticket</span></a>
         </li>
         <li>
-          <a href=""><span class = "las la-igloo"></span><span>Events</span></a>
+          <a href="adminEvents.php"><span class = "las la-igloo"></span><span>Events</span></a>
         </li>
         <li>
-          <a href=""><span class = "las la-igloo"></span><span>Vacancies</span></a>
+          <a href="adminVacancies.php"><span class = "las la-igloo"></span><span>Vacancies</span></a>
         </li>
         <li>
           <a href=""><span class = "las la-igloo"></span><span>Reports</span></a>

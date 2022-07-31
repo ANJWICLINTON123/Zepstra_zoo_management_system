@@ -192,6 +192,21 @@ a.hamberga{
     background-color: #07721c;
  }
 
+
+ a.login1{
+    margin-left: 10%;
+    color: #fff;
+
+ }
+ a.login1{
+    margin-top: 10px;
+    border-left:  5px solid #045010;
+ }
+
+ a.login1:hover{
+    border-left:  5px solid #fff;
+ }
+
  /*############## background image #######################*/
 div.background_image{
     background-image: url("image/bg1.jpg");

@@ -42,7 +42,7 @@
     <a href="Events.php">Events</a>
     <a href="ContactUS.php">Contact Us</a>
     <a href="Registration.php">Register</a>
-    <li><button type="button" class="sidebarLogin_button">login</button></li>
+    <a class = "login1" href="login.php">login</a>
 </div>
 
 
