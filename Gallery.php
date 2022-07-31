@@ -20,7 +20,7 @@
   
 <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_5terre.jpg">
+    <a href="animal_details.php">
         <img src="image/monkey.jpg" alt="Cinque Terre" width="500" height="300">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -29,7 +29,7 @@
   
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_forest.jpg">
+    <a href="animal_details.php">
         <img src="image/panda.jpg" alt="Forest" width="600" height="400">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -38,7 +38,7 @@
   
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_lights.jpg">
+    <a href="animal_details.php">
         <img src="image/antelop.jpg" alt="Northern Lights" width="600" height="400">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -47,7 +47,7 @@
   
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_mountains.jpg">
+    <a href="animal_details.php">
         <img src="image/bear.jpg" alt="Mountains" width="600" height="400">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -62,7 +62,7 @@
 
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_5terre.jpg">
+    <a href="animal_details.php">
         <img src="image/python1.jpg" alt="Cinque Terre" width="600" height="30px">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -72,7 +72,7 @@
   
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_forest.jpg">
+    <a href="animal_details.php">
         <img src="image/baboon1.jpg" alt="Forest" width="600" height="400">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -81,7 +81,7 @@
   
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_lights.jpg">
+    <a href="animal_details.php">
         <img src="image/gallery1.jpg" alt="Northern Lights" width="600" height="400">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -90,7 +90,7 @@
   
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_mountains.jpg">
+    <a href="animal_details.php">
         <img src="image/gallery2.jpg" alt="Mountains" width="600" height="400">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -104,7 +104,7 @@
 <div class="padding margin">
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_5terre.jpg">
+    <a href="animal_details.php">
         <img src="image/cheetah.jpg" alt="Cinque Terre" width="600" height="400">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -114,7 +114,7 @@
   
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_forest.jpg">
+    <a href="animal_details.php">
         <img src="image/elephant.jpg" alt="Forest" width="600" height="400">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -123,7 +123,7 @@
   
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_lights.jpg">
+    <a href="animal_details.php">
         <img src="image/zebra1.jpg" alt="Northern Lights" width="600" height="400">
       </a>
       <div class="desc">Add a description of the image here</div>
@@ -132,7 +132,7 @@
   
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_mountains.jpg">
+    <a href="animal_details.php">
         <img src="image/baboon1.jpg" alt="Mountains" width="600" height="400">
       </a>
       <div class="desc">Add a description of the image here</div>

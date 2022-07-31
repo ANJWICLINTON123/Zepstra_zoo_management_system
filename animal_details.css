@@ -1,0 +1,13 @@
+img.image1{
+    margin-top: 3rem;
+    margin-right: 30rem;
+}
+
+.details{
+    text-align: left;
+   margin-right: 5rem;
+}
+
+.good_display{
+    display: inline-block;
+}
