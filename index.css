@@ -84,9 +84,6 @@ nav ul{
     margin: 0;
     padding: 0;
     width: 100%;
-   
-    /* margin-top: 0%; */
-    /* z-index: 0; */
 }
 ul .navbar-nav {
     position: sticky;
@@ -94,9 +91,17 @@ ul .navbar-nav {
 nav.navbar{
     background-color: #045f16;
     overflow: hidden;
-    position: static;
+    position: sticky;
     padding-top: -100px;
+    overflow-x:hidden;
    
+}
+
+/* ############# Sticky header ################# */
+
+nav {
+	position:sticky;
+	top:0;
 }
 /* ################### hamberga ############### */
 .open-side a.hamberga{
