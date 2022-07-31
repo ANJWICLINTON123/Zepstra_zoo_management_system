@@ -8,17 +8,17 @@ img.image1{
    margin-right: 5rem;
 }
 
-.good_display{
-    display: inline-block;
+.col-sm-7{
+    position: none;
 }
 
 /*############## modile view #######################*/
 
 @media screen and (max-width: 680px) {
     img.image1{
-        margin-top: 4rem;
+        margin-top: 3rem;
         margin-left: 3rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
     
     .details{
