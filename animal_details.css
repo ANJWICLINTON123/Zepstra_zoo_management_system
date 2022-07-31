@@ -11,3 +11,19 @@ img.image1{
 .good_display{
     display: inline-block;
 }
+
+/*############## modile view #######################*/
+
+@media screen and (max-width: 680px) {
+    img.image1{
+        margin-top: 4rem;
+        margin-left: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .details{
+        text-align: left;
+       margin-left: 3rem;
+    }
+    
+}
