@@ -326,7 +326,7 @@ footer.container_footer{
 }
 .Our_footer h1{
     color: #045f16;
-    margin-right: 6%;
+    margin-right: 13%;
 }
 .Our_footer p{
   line-height: 25px;
@@ -350,14 +350,18 @@ footer.container_footer{
   margin-left: 11%;
   text-align: left;
 }
+
+.arrange1 h1{
+    margin-right: 5%;
+}
 .arrange2 h1{
-    margin-right: 35%;
+    margin-right: 30%;
 }
 .arrange1 p{
-    margin-left: 18%;
+    margin-left: 22%;
 }
 .arrange3 h1{
-    margin-right: 18%;
+    margin-right: 30%;
 }
 
 .info p{
@@ -459,7 +463,7 @@ img.zoopic{
 /*############## Footer #######################*/
 .Our_footer h1{
     font-size: 20px;
-    margin-right: -4%;
+    margin-right: 3%;
 }
 .Our_footer p{
   line-height: 25px;
@@ -469,10 +473,10 @@ img.zoopic{
 
 .Our_footer1 h1{
     font-size: 20px;
-    margin-right: 50%;
+    margin-right: 55%;
 }
 .Our_footer1 h3{
-    margin-right: 30%;
+    margin-right: 35%;
 }
 
 .Our_footer1 p{
@@ -481,18 +485,18 @@ img.zoopic{
   text-align: left;
 }
 .arrange1 h1{
-    margin-right: 45%;
-}
-.arrange1 p{
-    margin-left: 10%;
+    margin-right: 47%;
 }
 .arrange2 h1{
     margin-right: 40%;
 }
 .arrange3 h1{
-    margin-right: 60%;
+    margin-right: 58%;
+}
+.arrange2 h1{
+    margin-right: 42%;
 }
 .arrange1 p{
-    margin-left: 10%;
+    margin-left: 11%;
 }
 }
