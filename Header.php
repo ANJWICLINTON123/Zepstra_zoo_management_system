@@ -21,7 +21,7 @@
             
           <li><a class = "login" href="login.php">login</a></li>
             <li><a href="Registration.php">Register</a></li>
-            <li><a href="ContactUs.php">Contact Us</a></li>
+            <li><a href="ContactUS.php">Contact Us</a></li>
             <li><a href="admin.php">Admin</a></li>
             <li><a href="Events.php">Events</a></li>
             <li><a href="Vacancies.php">Vacancies</a></li>
