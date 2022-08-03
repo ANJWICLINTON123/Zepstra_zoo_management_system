@@ -1,5 +1,5 @@
 <!-- ######################## footer ############################# -->
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <footer class="container_footer">
     <div class="row">
       <div class="col-md-8 Our_footer">
@@ -29,10 +29,15 @@
       </div>
       <div class="col-md-5 Our_footer arrange2">
         <h1><a href="#">Connect </a> with Using</h1>
-        <i class="fa-brands fa-facebook"></i>
+        <div class = "contact_footer"><i class="fa fa-amazon" style="font-size:36px;color:green"></i>
+        <i class="fa fa-facebook-official" style="font-size:36px;color:green"></i>
+        <i class="fa fa-google-plus" style="font-size:36px;color:green"></i>
+        <i class="fa fa-twitter"style="font-size:36px;color:green"></i>
+      </div>
       </div>
       <div class="col-md-3 Our_footer arrange3">
         <h1><a href="#">Contact</a>  US</h1>
+        
         <p> Tel: <a href="#"> +321 767 865</a></p>
       </div>
     </div>

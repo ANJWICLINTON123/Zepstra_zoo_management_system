@@ -371,6 +371,13 @@ footer.container_footer{
     text-align: center;
     padding: 10px;
 }
+
+.contact_footer{
+    margin-top: 2rem;
+    margin-right: 15rem;
+    word-spacing: 2rem;
+}
+
 /*############## modile view #######################*/
 
 @media screen and (max-width: 680px) {
@@ -461,6 +468,15 @@ img.zoopic{
 }
 
 /*############## Footer #######################*/
+
+
+.contact_footer{
+    margin-left: 1rem;
+    word-spacing: 1rem;
+    margin-bottom: 2px;
+}
+
+
 .Our_footer h1{
     font-size: 20px;
     margin-right: 3%;

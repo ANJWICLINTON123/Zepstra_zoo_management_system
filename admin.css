@@ -1,7 +1,7 @@
 @import url('https //fonts.googleapis.com/css2 family=Poppins:wght@300;400;500;600&display=swap');
 
 :root{
-    --main-color:#045010;
+    --main-color: #045f16;
     --color-dark: #1d2231;
     --text-grey: #8390A2;
 }
@@ -340,6 +340,56 @@ tr td:last-child{
 }
 
 
+/* ########### admin_delete_edit_animals ###### */
+tr.color{
+    background-color: #d6d7da;
+}
+
+div.animal_details{
+    margin-top: 10%;
+}
+
+img.animal_image{
+    margin-top: 3px;
+    border-radius: 10%;
+}
+
+button.edit{
+    background-color: blue;
+    color: #fff;
+    font-size: large;
+    font-weight: 500;
+    padding: 3px 10px 3px 10px;
+    border-radius: 7px;
+    border-color: blue;
+    margin-top: 4px;
+    margin-left: 25%;
+}
+
+button.delete{
+    background-color: red;
+    color: #fff;
+    font-size: large;
+    font-weight: 500;
+    padding: 3px 10px 3px 10px;
+    border-radius: 7px;
+    border-color: red;
+    margin-top: 4px;
+}
+
+button.addamimal{
+    background-color: #045010;
+    margin-left: 1%;
+    margin-top: 3%;
+    padding: 7px 15px 7px 15px;
+    font-size:large;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+}
+
+
 /* #################### mobile view ######################## */
 
 @media screen and (max-width: 1200px){
@@ -406,6 +456,9 @@ tr td:last-child{
       .recent-grid{
         grid-template-columns: 60% 40%;
       }
+      .animal_details{
+        grid-template-columns: 60% 40%;
+      }
       header{
         margin-top: 6rem;
      }
@@ -418,6 +471,9 @@ tr td:last-child{
     .recent-grid{
       grid-template-columns: 100%;
     }
+    .animal_details{
+        grid-template-columns: 100%;
+      }
     .search-wrapper{
         display: none;
     }
@@ -492,8 +548,21 @@ tr td:last-child{
 @media screen and (max-width: 560px){
     .cards{
         grid-template-columns:100%;
+        margin-bottom: 22%;
       } 
       header{
         margin-top: 3.5rem;
+      }
+     
+      .card-header{
+        margin-top: 6rem;
+      }
+      .animal_details{
+        width: 98%;
+      }
+
+      table.table_width{
+        width: -20rem;
+        
       }
 }

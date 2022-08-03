@@ -13,7 +13,7 @@
 <?php include "defaultadmin.php"?>
 
 <form action="/action_page.php">
-<div class="container">
+<div class="container"><br><br><br><b><br><b><br>
     <h1>Add Vacancies</h1><br><br>
     <label for="name"><b>Vacancie title</b></label>
     <input type="text" placeholder="Enter event title" name="name" id="name" required>
