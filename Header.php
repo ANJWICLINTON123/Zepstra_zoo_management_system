@@ -19,10 +19,9 @@
        </span>
           <ul class="navbar-nav">
             
-          <li><a class = "login" href="login.php">login</a></li>
-            <li><a href="Registration.php">Register</a></li>
+          <li><a class = "login" href="login.php">Admin login</a></li>
+            <li><a href="Registration.php">About Me</a></li>
             <li><a href="ContactUS.php">Contact Us</a></li>
-            <li><a href="admin.php">Admin</a></li>
             <li><a href="Events.php">Events</a></li>
             <li><a href="Vacancies.php">Vacancies</a></li>
             <li><a href="BookTicket.php">Book Tickets</a></li>
@@ -42,7 +41,7 @@
     <a href="Events.php">Events</a>
     <a href="ContactUS.php">Contact Us</a>
     <a href="Registration.php">Register</a>
-    <a class = "login1" href="login.php">login</a>
+    <a class = "login1" href="login.php"> Admin login</a>
 </div>
 
 
