@@ -113,7 +113,7 @@ require('mysql_connection.php');
   '$email','$subjects','$messages')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "<span class= 'message'>New record created successfully</span>";
+  echo "<span class= 'message'>Message sent successfully</span>";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

@@ -50,8 +50,8 @@ function test_input($data) {
 
 	require('mysql_connection.php');
 	session_start();
-  $username = $_POST['username'];  
-  $psw = $_POST['psw'];  
+  $username = $_POST('username');  
+  $psw = $_POST('psw');  
     
       //to prevent from mysqli injection  
       $username = stripcslashes($username);  
@@ -61,7 +61,7 @@ function test_input($data) {
     
       $sql = "select *from registration where username = '$username' and password = '$psw'";  
       $result = mysqli_query($conn, $sql);  
-      $row = mysqli_fetch_array($result, MYSQLI_NUM);  
+      $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
       $count = mysqli_num_rows($result);  
         
       if($count == 1){  
@@ -79,10 +79,10 @@ function test_input($data) {
     <p>Please fill in this form to login.</p>
     <hr>
     <label for="username"><b>username</b></label>
-    <input type="text" name="username" placeholder="enter username.." value="<?php echo $username;?>">
+    <input type="text" name="username" id ="username" placeholder="enter username.." value="<?php echo $username;?>">
        <span class="error"> <?php echo $usernameErr;?></span>
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw">
+    <input type="password" id = "psw" placeholder="Enter Password" name="psw">
     <span class="error"> <?php echo $pswerr;?></span>
     <input class = "forms" type="submit" name="submit" value="Login"> 
   </div>
