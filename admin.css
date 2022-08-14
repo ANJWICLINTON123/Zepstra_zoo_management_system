@@ -168,6 +168,12 @@ header label{
     color: var(--text-grey);
 }
 
+
+input[type=button]{
+   color: red;
+    border: none;
+  }
+
 main{
     margin-top: 85px;
     padding: 2rem 1.5rem;
