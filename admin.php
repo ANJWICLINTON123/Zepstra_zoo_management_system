@@ -1,3 +1,8 @@
+
+<?php
+include("session.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +10,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="admin.css">
@@ -43,6 +49,9 @@
         <li>
           <a href=""><span class = "las la-igloo"></span><span>Reports</span></a>
         </li>
+        <li>
+          <a href="Registration.php"><span class ='fas'>&#xf067;</span><span>Add admin</span></a>
+        </li>
       </ul>
     </div>
   </div>
@@ -60,12 +69,12 @@
         <span class ="las la-search"></span>
         <input type="search" placeholder = "search here">
       </div>
-
       <div class="user-wrapper">
         <img src="image/man.jpg" width="40px" height ="30px" alt="">
         <div>
           <h4>John Doe</h4>
-          <small>super admin</small>
+          <small>super admin</small><br>
+          <a href = 'logout.php'><input type = button value = 'logout' name ='logout'></a>
         </div>
       </div>
   </header>
