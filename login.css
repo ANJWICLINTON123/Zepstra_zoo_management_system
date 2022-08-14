@@ -31,12 +31,35 @@ body {
     outline: none;
   }
   
+
+select.selected{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+ border-radius: 7px;
+  background: #f1f1f1;
+  border: none;
+}
+
   /* Overwrite default styles of hr */
   hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
   }
   
+button.adminlogin{
+  background-color: #045f16;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  margin-left: 12%;
+  color: #FFF;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: -3%;
+}
+
   /* Set a style for the submit button */
   .registerbtn {
     background-color: #045f16;
@@ -52,7 +75,7 @@ body {
   .registerbtn:hover {
     opacity: 1;
   }
-  
+  .error {color: #FF0000;}
   /* Add a blue text color to links */
   a {
     color: dodgerblue;
@@ -81,3 +104,19 @@ body {
     border: none;
   }
   
+  input[type=submit].forms{
+    width: 100%;
+    padding: 15px;
+    color: #FFF;
+    background-color: #045f16;
+    border: none;
+    border-radius: 7px;
+  }
+
+  @media screen and (max-width: 680px) {
+    button.adminlogin{
+      margin-left: 80%;
+      margin-bottom: 1%;
+    }
+    
+  }
