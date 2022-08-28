@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-<?php include "header.php"?>
+<?php include ('Header.php');?>
 <?php include "defaultadmin.php"?>
 
 <!-- ##################### table ######################## -->
@@ -24,27 +24,53 @@
           <table width="100%">
             <thead>
               <tr>
+              <td>ID</td>
                 <td>Event Name</td>
-                <td>Picture</td>
-                <td>Description</td>
                 <td>Event duration</td>
+                <td>Description</td>
                 <td>Event date</td>
-                <td></td>
+                <td>Picture</td>
+                <td>&nbsp; &nbsp;&nbsp; &nbsp;Action</td>
               </tr>
             </thead>
             <tbody>
+
+            <?php
+              require('mysql_connection.php');
+              // Check connection
+              if(mysqli_connect_errno()) {  
+                die(" Failed to connect with MySQL: ". mysqli_connect_error());  
+              }
+
+              // read all row from database table
+              $sql = "SELECT * FROM events";
+              $result = $conn->query($sql);
+
+              if (!$result){
+                die("Invalid query: ". $conn->error);
+              }
+
+              $count = 1;
+              while($row = $result->fetch_assoc()){
+                echo "   
             <tr>
-                <td>Events Aventure</td>
-                <td> <img class="animal_image" src="image/bird1.jpg"  width="50px" height = "40px" alt=""></td>
-                <td> Forest elephant <br> populations</td>
-                <td>
-                <span class="status"></span>
-                Four hours
-                </td>
-                <td>20/05/2022</td>
-                <td><button class = "edit">Edit</button> 
-                &nbsp; &nbsp;&nbsp;<button class = "delete">Delete</button></td>
-              </tr>
+            <td>$count</td>  
+            <td>$row[event_name]</td> 
+            <td>
+            <span class='status'></span>
+            $row[event_duration]
+            </td>
+            <td>$row[description]</td>
+            <td>$row[event_date]</td>
+            <td><img src=image/$row[picture] alt='Cinque Terre' width='30' height='30'></td>
+            <td class = 'action'>
+            <a class = 'edit' href ='edit_events.php?id=$row[id]'>edit</a>&nbsp; &nbsp; 
+            <a class = 'delete' href ='delete_events.php?id=$row[id]'>Delete</a>
+            </td>
+                ";
+                $count++;
+              }
+              ?>
             </tbody>
           </table>
           </div>
@@ -52,6 +78,6 @@
       </div>
     </div>
     
-<button class ="addamimal" type ="button" onclick = "location.href ='adminEvents.php'">Add New Animal &nbsp; <i class="fa fa-angle-double-down" style="font-size:30px;color:#fff"></i></button>
+<button class ="addamimal" type ="button" onclick = "location.href ='adminEvents.php'">Add New Events &nbsp; <i class="fa fa-angle-double-down" style="font-size:30px;color:#fff"></i></button>
 </body>
 </html>

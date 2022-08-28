@@ -14,16 +14,16 @@
 
     <?php
 // define variables and set to empty values
-$usernameErr = $pswerr = "";
-$username= $psw = "";
+$usernameErr = $loginerromessage= $errormessage =$pswerr = "";
+$name= $psw = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["username"])) {
+  if (empty($_POST["name"])) {
     $usernameErr = "*Name is required <br><br>";
   } else {
-    $username = test_input($_POST["username"]);
+    $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$username)) {
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
       $usernameErr ="<br>*Only letters and white space allowed<br><br>";
     }
   }
@@ -50,46 +50,54 @@ function test_input($data) {
 
 	require('mysql_connection.php');
 	session_start();
-  $username = $_POST('username');  
-  $psw = $_POST('psw');  
-    
-      //to prevent from mysqli injection  
-      $username = stripcslashes($username);  
-      $psw = stripcslashes($psw);  
-      $username = mysqli_real_escape_string($conn, $username);  
-      $psw = mysqli_real_escape_string($conn, $psw);  
-    
-      $sql = "select *from registration where username = '$username' and password = '$psw'";  
-      $result = mysqli_query($conn, $sql);  
-      $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
-      $count = mysqli_num_rows($result);  
-        
-      if($count == 1){  
-          echo "<h1><center> Login successful </center></h1>";  
-      }  
-      else{  
-          echo "<h1> Login failed. Invalid username or password.</h1>";  
-      }  
+
+  if (isset($_POST['submit'])){
+		
+		$name = $_POST['name']; // removes backslashes //escapes special characters in a string
+		$psw = $_POST['psw'];
+		
+	//Checking is user existing in the database or not
+  do{
+    if (empty($name)||empty($psw)){
+      $errormessage = "<span class= 'message'>All the files are required</span>";
+     // $errormessage = "All the files are required";
+      break;
+    }
+        $sql = "SELECT * FROM registration WHERE name='".$name."' and psw='".$psw."'";
+		$result = mysqli_query($conn,$sql) or die(mysql_error());
+		$rows = mysqli_fetch_array($result);
+        if($rows == true){
+			// $_SESSION['name'] = $name;     
+      
+			// header("Location: admin.php"); // Redirect user to index.php	
+      header("Location: admin.php");
+      
+            }else{
+              $loginerromessage = "<div class='form'><h3>Username/password is incorrect.</h3></div>";
+				}
+    }while(false);
+
+  
+  }
 ?>
 
 
 <form method="post">  
   <div class="container">
+  <?php echo $loginerromessage;?>
     <h1>Login as an Admin</h1>
     <p>Please fill in this form to login.</p>
     <hr>
-    <label for="username"><b>username</b></label>
-    <input type="text" name="username" id ="username" placeholder="enter username.." value="<?php echo $username;?>">
+    <label for="name"><b>username</b></label>
+    <input type="text" name="name" id ="name" placeholder="enter username.." value = "<?php $name;?>">
        <span class="error"> <?php echo $usernameErr;?></span>
     <label for="psw"><b>Password</b></label>
-    <input type="password" id = "psw" placeholder="Enter Password" name="psw">
+    <input type="password" id = "psw" placeholder="Enter Password" name="psw" value = "<?php $psw;?>">
     <span class="error"> <?php echo $pswerr;?></span>
+    <?php echo $errormessage;?><br>
     <input class = "forms" type="submit" name="submit" value="Login"> 
   </div>
-</form>
-
-
-
-    <?php include ("Footer.php") ?>
+</form> 
+<?php include ("Footer.php") ?>
 </body>
 </html>

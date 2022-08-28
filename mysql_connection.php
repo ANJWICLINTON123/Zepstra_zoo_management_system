@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
-$database = "testing";
+$password = "ySQba3uSz3Bq";
+$database = "zoosystem";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
 

@@ -16,23 +16,42 @@
 
 <h1 class = Header> Events</h1>
 
-<div class=" Container_Events">
-  <div class="row">
-        <div class="col-md-2"></div>  
-        <div class="col-md-8 Containerbg">
-        <h1 class = "Header2"> Events Aventure</h1>
-    <img class="EventImage" src="image/Event Elephane.jpg" alt="">
-    <p><b>Description: </b>Forest elephant populations were
-     found to have declined by more than 80% in the last 93 years. 
-     Savanna elephant populations declined by more than 50% over the last 75 years. Both forest 
-    and savanna elephants are threatened by ivory poaching and habitat loss and encroachment</p>
-    <p><b>EVent Duration: </b>Match 07, 2022 @10:00AM April 03, 2022 @ 400Pm</p>
-    <p><b>Event start Date: </b>2022-03-07</p>
-        </div> 
-        <div class="col-md-2"></div>
-  </div>
-</div>
+<?php
+           require('mysql_connection.php');
+              // Check connection
+              if(mysqli_connect_errno()) {  
+                die(" Failed to connect with MySQL: ". mysqli_connect_error());  
+              }
 
+              // read all row from database table
+              $sql = "SELECT * FROM events";
+              $result = $conn->query($sql);
+
+              if (!$result){
+                die("Invalid query: ". $conn->error);
+              }
+
+              $count = "";
+              while($row = $result->fetch_assoc()){
+                 echo "
+                   <div class='Container_Events'>
+                   <div class='row'>
+                   <div class='col-md-2'></div>
+                   <div class='col-md-8 Containerbg'>
+                   <h1 class = 'Header2'>$row[event_name]</h1>
+                   <img class='EventImage' src=image/$row[picture] width = '300' height = '200'>
+                   <p><b>Description: </b>$row[description]</p>
+                   <p><b>EVent Duration: </b>$row[event_duration]</p>
+                   <p><b>Event start Date: </b>$row[event_date]</p>
+                   <div class='col-md-2'></div>
+                   </div> 
+                   </div>
+                   </div><br><br><br><br>
+                 ";
+                 $count++;
+              }
+              ?>     
+              
 <!-- ############################ footer #################### -->
 <?php include ('Footer.php');?>
 </body>

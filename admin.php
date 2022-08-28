@@ -1,6 +1,6 @@
 
 <?php
-include("session.php");
+//include("session.php");
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ include("session.php");
   <input type="checkbox" id ="nav-toggle">
   <div class="sidebar">
     <div class="sidebar-brand">
-      <h2><span class="lab la-accusoft"></span><span>Accusoft</span></h2>
+      <h2><span class="lab la-accusoft"></span><span>Zoo System</span></h2>
     </div>
     <div class="sidebar-menu">
     <ul>
@@ -47,10 +47,13 @@ include("session.php");
           <a href="admin_delete_edit_vacancies.php"><span class = "fa fa-vimeo"></span><span>Vacancies</span></a>
         </li>
         <li>
-          <a href=""><span class = "las la-igloo"></span><span>Reports</span></a>
+          <a href="reports.php"><span class = "las la-igloo"></span><span>Reports</span></a>
         </li>
         <li>
-          <a href="Registration.php"><span class ='fas'>&#xf067;</span><span>Add admin</span></a>
+          <a href="admin _delete_edit.php"><span class ='fas'>&#xf067;</span><span>Add admin</span></a>
+        </li>
+        <li>
+          <a href="admin _delete_edit.php"><span class ='fas'>&#xf067;</span><span>Add admin</span></a>
         </li>
       </ul>
     </div>
@@ -81,11 +84,32 @@ include("session.php");
   
 
   <!-- ########################### MAIN ############################ -->
+  
   <main>
     <div class="cards">
       <div class="card-single">
+      <?php
+              require('mysql_connection.php');
+              // Check connection
+              if(mysqli_connect_errno()) {  
+                die(" Failed to connect with MySQL: ". mysqli_connect_error());  
+              }
+
+              // read all row from database table
+              $sql = "SELECT * FROM animal_details";
+              $result = $conn->query($sql);
+
+              if (!$result){
+                die("Invalid query: ". $conn->error);
+              }
+
+              $count = 0;
+              while($row = $result->fetch_assoc()){
+            $count++;
+              }
+              ?>
         <div>
-          <h1>54</h1>
+          <h1><?php echo $count;?></h1>
           <span>Animals</span>
         </div>
         <div>
@@ -94,8 +118,33 @@ include("session.php");
       </div>
       <div class="cards">
       <div class="card-single">
+
+
         <div>
-          <h1>120</h1>
+          <?php
+require('mysql_connection.php');
+
+// Check connection
+if(mysqli_connect_errno()) {  
+  die(" Failed to connect with MySQL: ". mysqli_connect_error());  
+}
+
+// read all row from database table
+$sql = "SELECT * FROM bookticket1";
+$result = $conn->query($sql);
+
+if (!$result){
+  die("Invalid query: ". $conn->error);
+}
+
+$count1 = 1;
+while($row = $result->fetch_assoc()){
+  echo 
+  "";
+  $count1++;
+}
+?>
+          <h1><?php echo $count1;?></h1>
           <span>Tickets</span>
         </div>
         <div>
@@ -105,7 +154,31 @@ include("session.php");
       <div class="cards">
       <div class="card-single">
         <div>
-          <h1>80</h1>
+        <?php
+        
+require('mysql_connection.php');
+
+// Check connection
+if(mysqli_connect_errno()) {  
+  die(" Failed to connect with MySQL: ". mysqli_connect_error());  
+}
+
+// read all row from database table
+$sql = "SELECT ticket FROM bookticket1 WHERE ticket = 'Foreign Ticket'";
+$result = $conn->query($sql);
+
+if (!$result){
+  die("Invalid query: ". $conn->error);
+}
+
+$count2 = 0;
+while($row = $result->fetch_assoc()){
+  echo 
+  "";
+  $count2++;
+}
+?>
+          <h1><?php echo $count2?></h1>
           <span>Foreign Tickets</span>
         </div>
         <div>
@@ -115,8 +188,31 @@ include("session.php");
       <div class="cards">
       <div class="card-single">
         <div>
-          <h1>40</h1>
-          <span>Cameroon Tickets</span>
+        <?php
+require('mysql_connection.php');
+
+// Check connection
+if(mysqli_connect_errno()) {  
+  die(" Failed to connect with MySQL: ". mysqli_connect_error());  
+}
+
+// read all row from database table
+$sql = "SELECT country FROM bookticket1 WHERE country = 'indian'";
+$result = $conn->query($sql);
+
+if (!$result){
+  die("Invalid query: ". $conn->error);
+}
+
+$count3 = 0;
+while($row = $result->fetch_assoc()){
+  echo 
+  "";
+  $count3++;
+}
+?>
+          <h1><?php echo $count3?></h1>
+          <span>indian Tickets</span>
         </div>
         <div>
           <span class="fa fa-money"></span>
@@ -228,84 +324,52 @@ include("session.php");
       <div class="card">
         <div class="card-header">
           <h3>Admins</h3>
-          <button>See all <span class = "las la-arrow-right"></span></button>
+          <button role = "button" type ="button" onclick = "location.href ='admin _delete_edit.php'">See all <span class = "las la-arrow-right"></span></button>
         </div>
-        <div class="card-body">
-          <div class="customer">
-            <div class="info">
-            <img src="image/man.jpg" width="40px" height = "40px" alt="">
-            <div>
-              <h4>Clinton brown</h4>
-              <small>manager</small>
-            </div>
-          </div>
-          <div class="contact">
-          <span class = "las la-user-circle"></span>
-            <span class = "las la-comment"></span>
-            <span class = "las la-phone"></span>
-          </div>
-         </div>
-         <div class="customer">
-            <div class="info">
-            <img src="image/man.jpg" width="40px" height = "40px" alt="">
-            <div>
-              <h4>James sam</h4>
-              <small>Developer</small>
-            </div>
-          </div>
-          <div class="contact">
-          <span class = "las la-user-circle"></span>
-            <span class = "las la-comment"></span>
-            <span class = "las la-phone"></span>
-          </div>
-         </div>
 
-         <div class="customer">
-            <div class="info">
-            <img src="image/man.jpg" width="40px" height = "40px" alt="">
-            <div>
-              <h4>Gills</h4>
-              <small>Developer</small>
-            </div>
-          </div>
-          <div class="contact">
-          <span class = "las la-user-circle"></span>
-            <span class = "las la-comment"></span>
-            <span class = "las la-phone"></span>
-          </div>
-         </div>
+        <?php
+                require('mysql_connection.php');
+              // Check connection
+              if(mysqli_connect_errno()) {  
+                die(" Failed to connect with MySQL: ". mysqli_connect_error());  
+              }
 
-         <div class="customer">
-            <div class="info">
-            <img src="image/man.jpg" width="40px" height = "40px" alt="">
-            <div>
-              <h4>Eben Yenchi</h4>
-              <small>manager</small>
-            </div>
-          </div>
-          <div class="contact">
-          <span class = "las la-user-circle"></span>
-            <span class = "las la-comment"></span>
-            <span class = "las la-phone"></span>
-          </div>
-         </div>
+              // read all row from database table
+              $sql = "SELECT * FROM registration";
+              $result = $conn->query($sql);
 
-         <div class="customer">
-            <div class="info">
-            <img src="image/man.jpg" width="40px" height = "40px" alt="">
-            <div>
-              <h4>Joyce peace</h4>
-              <small>Assistant Dvl</small>
-            </div>
-          </div>
-          <div class="contact">
-          <span class = "las la-user-circle"></span>
-            <span class = "las la-comment"></span>
-            <span class = "las la-phone"></span>
-          </div>
-         </div>
+              if (!$result){
+                die("Invalid query: ". $conn->error);
+              }
 
-        </div>
+              $count = 0;
+              while($row = $result->fetch_assoc()){
+                if ($count == 5){
+                  break;
+                 }
+                 echo "
+                 <div class='card-body'>
+                 <div class='customer'>
+                    <div class='info'>
+                    <img src='image/$row[picture]' width='40px' height = '40px' alt='admin pic'>
+                    <div>
+                      <h4>$row[name]</h4>
+                      <small>$row[position]</small><br>
+                      <small><a class = 'dashbordedit' href ='#'>view_profile</a></small>
+                    </div>
+                  </div>
+                  <div class='contact'>
+                  <span class = 'las la-user-circle'></span>
+                    <span class = 'las la-comment'></span>
+                    <span class = 'las la-phone'></span>
+                  </div>
+                 </div>
+                </div>
+        
+                 ";
+                 $count++;
+              }
+              ?>   
       </div>
 
       </div>

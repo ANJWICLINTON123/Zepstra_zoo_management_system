@@ -56,7 +56,7 @@
  <?php
 // define variables and set to empty values
 $nameErr = $emailErr= "";
-$name = $email = $subject = $comment = "";
+$name = $email = $subject = $errormessage = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -91,6 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $subject = test_input($_POST["subject"]);
   }
+  
 }
 
 function test_input($data) {
@@ -100,15 +101,24 @@ function test_input($data) {
   return $data;
 }
 
+
 require('mysql_connection.php');
 
-  if(isset($_POST['email'])) { 
+  if(isset($_POST['submit'])) { 
     $name = $_REQUEST['name'];
     $email = $_REQUEST['email'];
     $subjects = $_REQUEST['subject'];
-    $messages = $_REQUEST['messages'];
+    $messages = $_REQUEST['messages'];    
+  // check for not empty
+  do{
+    if (empty($name)||empty($email)||empty($subjects)||empty($messages)){
+      echo "<span class= 'message'>All the files are required</span>";
+     // $errormessage = "All the files are required";
+      break;
+    }
+  
     
-    $sql = "INSERT INTO messagess (name, email, subjects, messages)
+    $sql = "INSERT INTO message (name, email, subjects, messages)
     VALUES ('$name',
   '$email','$subjects','$messages')";
 
@@ -117,7 +127,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
+}while(false);
   $conn->close();
 
   }
@@ -125,16 +135,17 @@ if ($conn->query($sql) === TRUE) {
 
         <div class="SubmitForm">
         <h1 class="foreign_ticket">Send your Message</h1>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+    <form method="post">  
        Name: <input type="text" name="name" placeholder="Your last name.." value="<?php echo $name;?>">
        <span class="error"> <?php echo $nameErr;?></span>
         <br><br>
         E-mail: <input type="text" name="email" placeholder="enter email.." value="<?php echo $email;?>">
        <span class="error"> <?php echo $emailErr;?></span>
        <br><br>
-       <label for="">Subject</label> <input type="text" id="subject" name="subject"value="<?php echo $subject;?>" required><br><br>
+       <label for="">Subject</label> <input type="text" id="subject" name="subject"value="<?php echo $subject;?>"><br><br>
        <textarea class="textarea" id="w3review" name="messages" rows="4" cols="50" placeholder="type your message here"><?php echo $comment;?></textarea>
        <br><br>
+       <?php $errormessage ?>
          <input class ="submitButton" type="submit" name="submit" value="Submit">  
    </form>
         </div>

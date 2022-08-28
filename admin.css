@@ -16,10 +16,10 @@
 }
 
 .sidebar{
-   margin-top: 80px;
+   margin-top: 68px;
    margin-top: -w;
    width: 345px;
-   position: fixed;
+   position:fixed;
    left: 0;
    top: 0;
    height: 100%;
@@ -114,7 +114,7 @@ header{
     width: calc(100% - 345px);
     top: 0;
     z-index: 100;
-    margin-top: 5rem;
+    margin-top: 4rem;
     transition: left 300ms;
 }
 
@@ -345,11 +345,15 @@ tr td:last-child{
     color: var(--main-color);
 }
 
-
-/* ########### admin_delete_edit_animals ###### */
-tr.color{
-    background-color: #d6d7da;
+a.dashbordedit{
+    color: white;
+    font-weight: 600;
+    border: solid 1px blue;
+    padding: 2px 3px 2px 3px;
+    border-radius: 7px;
+    background-color: blue;
 }
+/* ########### admin_delete_edit_animals ###### */
 
 div.animal_details{
     margin-top: 10%;
@@ -360,7 +364,7 @@ img.animal_image{
     border-radius: 10%;
 }
 
-button.edit{
+a.edit{
     background-color: blue;
     color: #fff;
     font-size: large;
@@ -372,7 +376,11 @@ button.edit{
     margin-left: 25%;
 }
 
-button.delete{
+td.action{
+    margin-right: 120%;
+}
+
+a.delete{
     background-color: red;
     color: #fff;
     font-size: large;
@@ -395,7 +403,41 @@ button.addamimal{
     border-radius: 7px;
 }
 
+tr.color td{
+    margin-left: 10%;
+}
 
+h1.margin{
+    margin-top: 7%;
+}
+
+button.add_animal{
+    background-color: #045f16;
+    color: #f1f5f9;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    margin-right: 1%;
+}
+
+button.cancel{
+    color:black;
+    font-weight: 600;
+    padding: 7px;
+    border-radius: 7px;
+    border-color: #045f16;
+}
+
+div.container{
+    margin-top: 10%;
+}
+div.report{
+    margin-top: 10%;
+    margin-left: -1%;
+    grid-template-columns: 100% auto;
+
+}
 /* #################### mobile view ######################## */
 
 @media screen and (max-width: 1200px){

@@ -10,28 +10,35 @@
 
 div.apply{
     margin-right: 20%;
-    text-align: left;
+    text-align: left; 
+}
+
+div.jobApply{
+    padding-bottom: 5%;
 }
 .jobApply h2{
-    color: green;
+    color: #045f16;
     text-align: left;
     font-weight: 500;
+    margin-top: 4%;
 }
 .jobApply p{
     text-align:left;
     font-weight: 200;
 }
-
-.applybutton{
+.jobApply p.shift{
+    margin-bottom: 10%;
+}
+a.applybutton{ 
     color: #fff;
-    background-color: green;
+    background-color:  #045f16;
     padding: 5px 10px 5px 10px;
     font-size: larger;
-    font-weight: 600;
-    border-color: green;
+    font-weight: 400;
+    border:none;
     border-radius: 7%;
     margin-left: 80%;
-    margin-bottom: 3%;
+    text-decoration: none;
 }
 
 div.jobApply{
@@ -42,12 +49,12 @@ div.jobApply{
 
 @media screen and (max-width: 680px) {
     div.apply{
-        margin-left: 8%;
+        margin-left: 10%;
         margin-top: 12%;
     }
 
-    .vacancies_h1 h1{
-        margin-top: 6%;
+    .jobApply2{
+        margin-top: 14%;
     }
 
 }

@@ -20,12 +20,12 @@
           <ul class="navbar-nav">
             
           <li><a class = "login" href="login.php">Admin login</a></li>
-            <li><a href="Registration.php">About Me</a></li>
+            <li><a href="aboutMe.php">About Me</a></li>
             <li><a href="ContactUS.php">Contact Us</a></li>
             <li><a href="Events.php">Events</a></li>
             <li><a href="Vacancies.php">Vacancies</a></li>
             <li><a href="BookTicket.php">Book Tickets</a></li>
-            <li><a href="Animal.php">Animals</a></li>
+            <li><a href="animal.php">Animals</a></li>
             <li><a href="Gallery.php">Gallery</a></li>
             <li><a href="index.php">Home</a></li>
          </ul>
@@ -35,12 +35,12 @@
     <a href="#" class="btn-close" onclick="closeSlidemenu()">&times;</a>
     <a href="index.php">Home</a>
     <a href="Gallery.php">Gallery</a>
-    <a href="Animal.php">Animals</a>
+    <a href="animal.php">Animals</a>
     <a href="BookTicket.php">Book Tickets</a>
     <a href="Vacancies.php">Vacancies</a>
     <a href="Events.php">Events</a>
     <a href="ContactUS.php">Contact Us</a>
-    <a href="Registration.php">Register</a>
+    <a href="aboutMe.php">About Me</a>
     <a class = "login1" href="login.php"> Admin login</a>
 </div>
 

@@ -1,3 +1,82 @@
+
+
+<?php
+require('mysql_connection.php');
+
+$id = "";
+$name = "";
+$email = "";
+$position = "";
+$psw = "";
+$picture = "";
+
+$errormessage = "";
+$successmessage = "";
+
+if ($_SERVER['REQUEST_METHOD']=='GET'){
+    // GET method: show the data of the client
+
+    if (!isset($_GET['id'])){
+        header("location: admin _delete_edit.php");
+        exit;
+    }
+
+    $id = $_GET["id"];
+
+    //read the row of selected client from database table
+
+    $sql = "SELECT * FROM registration WHERE id = $id";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    
+    if(!$row){
+        header("location: admin _delete_edit.php");
+        exit;
+        
+        $name = $_POST["name"];
+        $email= $_POST["email"];
+        $position = $_POST["position"];
+        $psw = $_POST["psw"];
+        $picture = $_POST["picture"];
+    }
+
+
+
+}else{
+      // post method: show the data of the client
+      $id = $_POST["id"];
+      $name = $_POST["name"];
+      $email= $_POST["email"];
+      $position = $_POST["position"];
+      $psw = $_POST["psw"];
+      $picture = $_POST["picture"];
+
+      do {
+        if (empty($id)||empty($name)||empty($email)||empty($position)||empty($psw)||empty($picture)){
+            $errormessage = "All the files are required";
+            break;
+          }
+
+          $sql = "UPDATE registration " . 
+          "SET name= '$name', email = '$email', position = '$position', psw = '$psw', picture = '$picture'". 
+          "WHERE id = $id";
+
+          $result = $conn->query($sql);
+          if (!$result){
+            $errormessage = "invalid query: " . $conn->error;
+            break;
+          }
+
+          $successmessage = "client updated correctly";
+
+          header("location: admin _delete_edit.php");
+          exit;
+
+      }while(true);
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,49 +135,9 @@ function test_input($data) {
 }
 
 
-
-
-require('mysql_connection.php');
-		
-// Check connection
-if($conn === false){
-  die("ERROR: Could not connect. "
-    . mysqli_connect_error());
-}
-
-// Taking all 5 values from the form data(input)
-if(isset($_POST['submit'])) { 
-
-$name = $_POST['name'];
-$email = $_POST['email'];
-$position = $_POST['position'];
-$psw = $_POST['psw'];
-$picture = $_POST['picture'];
-
-do{
-  if (empty($name)||empty($email)||empty($position)||empty($psw)||empty($picture)){
-    echo "<br><br><br><span class= 'message'>All the files are required</span>";
-   // $errormessage = "All the files are required";
-    break;
-  }
-$sql = "INSERT INTO registration (name, email, position, psw, picture)
-    VALUES ('$name',
-  '$email','$position','$psw', '$picture')";
-
-if(mysqli_query($conn, $sql)){
-echo "<script> alert('You have have added and admin')</script>";
-header("location: admin _delete_edit.php");
-} else{
-echo "ERROR: Hush! Sorry $sql. "
-. mysqli_error($conn);
-}
-}while(false);
-
-// Close connection
-mysqli_close($conn);
-}
 ?>
-<form method="post">  
+<form method="post" action="Registration.php"> 
+<input type="hidden" name = "id" value = "<?php echo $id;?>"> 
   <div class="container">
     <h1>ADD ADMIN</h1>
     <p>Please fill in this form to <b>add admin</b>.</p>
@@ -125,7 +164,8 @@ mysqli_close($conn);
   <input type="file" name ="picture" id="myFile" value="<?php echo $picture ?>">
 
     <hr>
-    <input class = "forms" type="submit" name="submit" value="Add admin"> 
+    <input  class ="add_animal" type="submit" name="submit" value="update"> 
+    <button class ="cancel" role = "button" type ="button" onclick = "location.href ='admin _delete_edit.php'">cancel</button>
   </div>
   
   <div class="container signin">

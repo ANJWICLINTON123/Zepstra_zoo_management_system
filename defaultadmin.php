@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="admin.css">
   <title>Dashboard</title>
 </head>
@@ -40,7 +41,13 @@
           <a href="admin_delete_edit_vacancies.php"><span class = "fa fa-vimeo"></span><span>Vacancies</span></a>
         </li>
         <li>
-          <a href=""><span class = "las la-igloo"></span><span>Reports</span></a>
+          <a href="reports.php"><span class = "las la-igloo"></span><span>Reports</span></a>
+        </li>
+        <li>
+          <a href="admin _delete_edit.php"><span class ='fas'>&#xf067;</span><span>Add admin</span></a>
+        </li>
+        <li>
+          <a href="admin _delete_edit.php"><span class ='fas'>&#xf067;</span><span>Add admin</span></a>
         </li>
       </ul>
     </div>
@@ -64,7 +71,8 @@
         <img src="image/man.jpg" width="40px" height ="30px" alt="">
         <div>
           <h4>John Doe</h4>
-          <small>super admin</small>
+          <small>super admin</small><br>
+          <a href = 'logout.php'><input type = button value = 'logout' name ='logout'></a>
         </div>
       </div>
   </header> 

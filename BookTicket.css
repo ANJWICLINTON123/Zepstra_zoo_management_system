@@ -27,9 +27,25 @@ h1.ticket{
     color: #045f16;
 }
 h1.ticketh1{
-  margin-left: 29rem;
   color: #045f16;
   margin-bottom: 3rem;
+  text-align: center;
+}
+.ticketmangement{
+ padding-top: 5rem;
+}
+
+button.search{
+  background-color: #045f16;
+  padding: 7px;
+  border: none;
+  margin-left: 1%;
+  color: #fff;
+  border-radius: 7px;
+  font-weight: 400;
+}
+button.search:hover{
+  background-color: #0adb34;
 }
 /* ############# Form for ticket ################# */
 /* input[type=text], select {
@@ -48,8 +64,18 @@ h1.ticketh1{
     padding: 20px;
   } */
 
+    
+  select.Bticket{
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border-radius: 7px;
+   
+  }
+
   input[type=text]{
-    width: 50%;
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     margin-left: 5%;
@@ -59,8 +85,41 @@ h1.ticketh1{
     box-sizing: border-box;
   }
 
+
+  input[type=text].country{
+    width: 33%;
+    margin-left: 5%;
+  }
+  input[type=text]#address{
+    width: 38%;
+    margin-left: 2%;
+  }
+  input[type=number].country{
+    width: 35%;
+    margin-left: 5%;
+  }
+.error{
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+}
+  input[type=number]#country{
+    width: 35%;
+    margin-left:1%;
+  }
+  input[type=number]#tel{
+    width: 35%;
+    margin-left:3%;
+  }
+label.country{
+  margin-right: 2px;
+}
+  input[type=number]#age{
+    width: 35%;
+  }
+
   input[type=number]{
-    width: 50%;
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     margin-left: 5%;
@@ -69,8 +128,36 @@ h1.ticketh1{
     border-radius: 4px;
     box-sizing: border-box;
   }
+  input[type=text].searchinput{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 10%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit].searchinput{
+    width: 10%;
+    padding: 12px 11px 12px 12px;
+    background-color: #045f16;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 3%;
+  }
+
+  input[type=submit].searchinput:hover{
+    background-color: #0adb34;
+  }
+
   input[type=date]{
-    width: 50%;
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     margin-left: 5%;
@@ -79,27 +166,93 @@ h1.ticketh1{
     border-radius: 4px;
     box-sizing: border-box;
   }
-button.submit_button{
+
+  input[type=date].country{
+    width: 35%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 5%;
+  }
+  .submit_button{
     text-align: center;
     color: #fff;
     padding: 10px 125px 10px 125px;
     background-color: #045f16;
-    border-color: #045f16;
+    border: none;
     margin-left: 65px;
     font-size: 15px;
     font-weight: 600;
     
 }
+
+.update{
+  background-color: #045f16;
+  padding: 9px;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 15%;
+}
+
+.cancel{
+  margin-right: 40%;
+}
+
 h1.foreign_ticket{
     color: #045f16;
 }
 h6{
     color: #f2f2f2;
 }
+
+.message{
+  color: red;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
   /* ############# Mobile View ################# */
 @media screen and (max-width: 680px) {
     #customers {
         width: 80%;
         margin-left: 10%;
+      }
+
+      input[type=text].country{
+        width: 80%;
+       
+      }
+      input[type=text]#address{
+        width: 80%;
+    
+      }
+      input[type=number].country{
+        width: 20%;
+     
+      }
+    
+      input[type=number]#country{
+        width: 20%;
+      
+      }
+      input[type=number]#tel{
+        width: 80%;
+        
+      }
+      input[type=number]#age{
+        width: 80%;
+      }
+      select.Bticket{
+        width: 73%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border-radius: 7px;
+       
+      }
+      input[type=date].country{
+        width: 80%;
       }
   }

@@ -1,10 +1,4 @@
 
-<?php
-$email = "anjwiclinton@gmail.com";
-$psw = "#67)_L23@)as";
-
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +38,7 @@ session_start();
          which was opened for scientific study in 1828 and to the public 
          in 1847. In the United States alone,
          zoos are visited by over 181 million people annually.</p>
-         <button class="gallery_button">view Gallery</button>
+         <button class="gallery_button" onclick = "location.href ='Gallery.php'">view Gallery</button>
     </div>
     <div class="col-md-3">
       <div class="col3image">
@@ -71,14 +65,14 @@ session_start();
   <h1 class="sponsors_header">Our sponsores</h1>
   <div class="row">
     <div class="col-md-4">
-      <img class="sponsors_image" src="image/sponsor1-removebg-preview.png" alt="">
+      <img class="sponsors_image" src="image/sponsor.png" alt="">
       <div class="divspons">
          <h3>Marry Group</h3>
          <p>Located in marryland and provide us with meat for the lions</p>
       </div>
     </div>
     <div class="col-md-4">
-      <img class="sponsors_image" src="image/sponsor2-removebg-preview.png" alt="">
+      <img class="sponsors_image" src="image/sponsor2 (2).png" alt="">
       <div class="divspons">
          <h3>Marry Group</h3>
          <p>Located in marryland and provide us with meat for the lions</p>

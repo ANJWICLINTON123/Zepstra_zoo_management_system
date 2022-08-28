@@ -11,7 +11,11 @@ body {
   .container {
     padding: 16px;
     background-color: white;
-    margin-top: 3%;
+    margin-top: 6%;
+  }
+
+  .mycontainer{
+    margin-bottom: -5%;
   }
   .container h1{
     color: #045f16;;
@@ -25,19 +29,27 @@ body {
     border: none;
     background: #f1f1f1;
   }
+
+  input[type=number]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
   
   input[type=text]:focus, input[type=password]:focus, input[type=date]:focus {
     background-color: #ddd;
     outline: none;
   }
-  
 
 select.selected{
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
- border-radius: 7px;
+  border-radius: 7px;
   background: #f1f1f1;
   border: none;
 }
@@ -72,6 +84,17 @@ button.adminlogin{
     opacity: 0.9;
   }
   
+  input[type=submit].add_animal{
+    background-color: #045f16;
+    color: #f1f5f9;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    margin-right: 1%;
+    width: 7%;
+}
+
   .registerbtn:hover {
     opacity: 1;
   }
@@ -104,7 +127,7 @@ button.adminlogin{
     border: none;
   }
   
-  input[type=submit].forms{
+  input[type=submit]{
     width: 100%;
     padding: 15px;
     color: #FFF;
@@ -112,11 +135,67 @@ button.adminlogin{
     border: none;
     border-radius: 7px;
   }
+  input[type=submit].applybn{
+    background-color:#045f16;
+    width: 8%;
+    color: #f1f5f9;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    margin-right: 1%;
+    margin-top: -3%;
+  }
 
+
+  button.applybn{
+    background-color: #045f16;
+    color: #f1f5f9;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    margin-right: 1%;
+    margin-top: -3%;
+}
+
+button.cancel{
+    color:black;
+    font-weight: 600;
+    padding: 7px;
+    border-radius: 7px;
+    border-color: #045f16;
+}
+
+span.message{
+  color: #FF0000;
+  font-weight: 600;
+  font-style: italic;
+  margin-left: 35rem;
+}
+div.form{
+  color: red;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
   @media screen and (max-width: 680px) {
     button.adminlogin{
       margin-left: 80%;
       margin-bottom: 1%;
     }
+    .mycontainer{
+      margin-bottom: -10%;
+    }
+
+    button.applybn{
+      margin-top: -10%;
+  }
+  
+  button.cancel{
+    margin-top: -10%;
+  }
+  
     
   }

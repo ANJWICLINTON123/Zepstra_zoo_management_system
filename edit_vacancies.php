@@ -1,7 +1,7 @@
 <?php
-
 require('mysql_connection.php');
 
+$id = "";
 $vacancies_name = "";
 $description= "";
 $job_type = "";
@@ -10,41 +10,65 @@ $job_start_date = "";
 $errormessage = "";
 $successmessage = "";
 
-if ($_SERVER['REQUEST_METHOD']=='POST'){
-  $vacancies_name = $_POST["vacancies_name"];
-  $description = $_POST["description"];
-  $job_type = $_POST["job_type"];
- $job_start_date = $_POST["job_start_date"];
+if ($_SERVER['REQUEST_METHOD']=='GET'){
+    // GET method: show the data of the client
 
-do{
-  if (empty($vacancies_name)||empty($description)||empty($job_type)||empty($job_start_date)){
-    $errormessage = "All the files are required";
-    break;
-  }
+    if (!isset($_GET['id'])){
+        header("location: admin_delete_edit_vacancies.php");
+        exit;
+    }
 
-  //add new client to database
-$sql = "INSERT INTO  jobvacancies (vacancies_name, description, job_type, job_start_date)". 
-        "VALUES('$vacancies_name', '$description', '$job_type', '$job_start_date')";
-$result = $conn->query($sql);
+    $id = $_GET["id"];
 
-if (!$result){
-  $errormessage = "Invalid query: ".$conn->error;
-  break;
-}
+    //read the row of selected client from database table
+
+    $sql = "SELECT * FROM  jobvacancies WHERE id = $id";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    
+    if(!$row){
+        header("location: admin_delete_edit_vacancies.php");
+        exit;
+
+        $vacancies_name = $_POST["vacancies_name"];
+        $description = $_POST["description"];
+        $job_type = $_POST["job_type"];
+       $job_start_date = $_POST["job_start_date"];
+    }
 
 
 
-$vacancies_name = "";
-$description= "";
-$job_type = "";
-$job_start_date = "";
+}else{
+      // post method: show the data of the client
+      $id = $_POST["id"];
+      $vacancies_name = $_POST["vacancies_name"];
+      $description = $_POST["description"];
+      $job_type = $_POST["job_type"];
+      $job_start_date = $_POST["job_start_date"];
 
-$successmessage = "vacancie added correctly";
+      do {
+        if (empty($id)||empty($vacancies_name)||empty($description)||empty($job_type)||empty($job_start_date)){
+            $errormessage = "All the files are required";
+            break;
+          }
 
-header("location: admin_delete_edit_vacancies.php");
-exit;
+          $sql = "UPDATE jobvacancies " . 
+          "SET vacancies_name= '$vacancies_name', description = '$description', job_type = '$job_type', job_start_date = '$job_start_date'". 
+          "WHERE id = $id";
 
-}while(false);
+          $result = $conn->query($sql);
+          if (!$result){
+            $errormessage = "invalid query: " . $conn->error;
+            break;
+          }
+
+          $successmessage = "vacancies updated correctly";
+
+          header("location: admin_delete_edit_vacancies.php");
+          exit;
+
+      }while(true);
+
 }
 ?>
 
@@ -63,7 +87,7 @@ exit;
 <?php include "defaultadmin.php"?>
 
 <form method = "post">
-<input type="hidden" value = "<?php echo $id; ?>">
+<input type="hidden"  name = "id" value = "<?php echo $id; ?>">
 <div class="container"><br><br><br><b><br><b><br>
     <h1>Add Vacancies</h1><br><br>
 
@@ -79,7 +103,7 @@ exit;
     <textarea class="textarea" id="w3review" name="description" rows="4" cols="50" placeholder="type your message here"  value="<?php echo $description;?>"></textarea>
     <label for="name"><b>Job Type</b></label>
     <select class="selected" type="text" placeholder="Enter Event Duration" name="job_type" id="name"  value="<?php echo $job_type;?>">
-    <option value="vacancy type">vacancy type</option>
+    <option placeholder="vacancy type">vacancy type</option>
     <option value="TEMPORAL">TEMPORAL</option>
     <option value="PERMINENT">PERMINENT</option>
   </select>

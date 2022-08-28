@@ -36,7 +36,7 @@
       </div>
       </div>
       <div class="col-md-3 Our_footer arrange3">
-        <h1><a href="#">Contact</a>  US</h1>
+        <h1><a href="aboutMe.php">Contact</a> Me</h1>
         <p> Name: <a href="#">Anjwi Clinton Anjwi</a></p>
         <p> Tel: <a href="#"> +237 650 42 29 04</a></p>
         <p> Project Title: <a href="#">Zoo Management System</a></p>

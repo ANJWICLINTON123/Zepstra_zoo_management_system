@@ -18,127 +18,37 @@
 </div>
 <br><br>
   
-<div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/monkey.jpg" alt="Cinque Terre" width="500" height="300">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-  
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/panda.jpg" alt="Forest" width="600" height="400">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-  
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/antelop.jpg" alt="Northern Lights" width="600" height="400">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-  
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/bear.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
+<?php
+           require('mysql_connection.php');
+              // Check connection
+              
+              if(mysqli_connect_errno()) {  
+                die(" Failed to connect with MySQL: ". mysqli_connect_error());  
+              }
 
-  
-  <hr>
-  <br><br><br>
+              // read all row from database table
+              $sql = "SELECT * FROM animal_details";
+              $result = $conn->query($sql);
 
+              if (!$result){
+                die("Invalid query: ". $conn->error);
+              }
 
+              while($row = $result->fetch_assoc()){
+                echo 
+                "<div class='responsive'>
+                <div class='gallery'>
+                <a href='animal_details.php'>
+                    <img src=image/$row[picture] alt='Cinque Terre' width='500' height='300'>
+                  </a>
+                  <div class='desc'>$row[description]</div>
+                </div>
+              </div>";
+              }
+              ?>
+              <div class='arrange'> &nbsp;</div>
 
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/python1.jpg" alt="Cinque Terre" width="600" height="30px">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-  
-  
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/baboon1.jpg" alt="Forest" width="600" height="400">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-  
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/gallery1.jpg" alt="Northern Lights" width="600" height="400">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-  
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/gallery2.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-
-  <hr>
-  <br><br>
-
-
-<div class="padding margin">
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/cheetah.jpg" alt="Cinque Terre" width="600" height="400">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-  
-  
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/elephant.jpg" alt="Forest" width="600" height="400">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-  
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/zebra1.jpg" alt="Northern Lights" width="600" height="400">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-  
-  <div class="responsive">
-    <div class="gallery">
-    <a href="animal_details.php">
-        <img src="image/baboon1.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">Add a description of the image here</div>
-    </div>
-  </div>
-</div>
+ 
 <!-- ####################### footer ############# -->
 <?php include ('Footer.php');?>
 </body>

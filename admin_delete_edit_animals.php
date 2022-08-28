@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-<?php include "header.php"?>
+<?php include ('Header.php');?>
 <?php include "defaultadmin.php"?>
 
 <!-- ##################### table ######################## -->
@@ -23,64 +23,56 @@
           <div class="table-responsive">
           <table class = "table_width" width="100%">
             <thead>
-              <tr>
+              <tr class ="color1">
+                <td>ID</td>
                 <td>Animal Name</td>
                 <td>Date of birth</td>
                 <td>Gender</td>
                 <td>Description</td>
                 <td>Picture</td>
-                <td></td>
+                <td>&nbsp; &nbsp;&nbsp; &nbsp;Action</td>
               </tr>
             </thead>
             <tbody>
-            <tr class= "color">
-                <td>Common myna</td>
-                <td> 2011-03-23</td>
-                <td>Male</td>
+              <?php
+
+              require('mysql_connection.php');
+              // Check connection
+              if(mysqli_connect_errno()) {  
+                die(" Failed to connect with MySQL: ". mysqli_connect_error());  
+              }
+
+              // read all row from database table
+              $sql = "SELECT * FROM animal_details";
+              $result = $conn->query($sql);
+
+              if (!$result){
+                die("Invalid query: ". $conn->error);
+              }
+
+              $count = 1;
+              while($row = $result->fetch_assoc()){
+                echo 
+                "<tr class= 'color'>
+                <td>$count</td>
+                <td>$row[animal_name]</td>
+                <td>$row[date_of_birth]</td>
+                <td>$row[gender]</td>
                 <td>
-                <span class="status"></span>
-                review
+                <span class='status'></span>
+                $row[description]
                 </td>
-                <td><img class="animal_image" src="image/bird1.jpg"  width="50px" height = "40px" alt=""></td>
-                <td><button class = "edit">Edit</button> 
-                &nbsp; &nbsp;&nbsp;<button class = "delete">Delete</button></td>
-              </tr>
-              <tr>
-                <td>Tiger</td>
-                <td>2021-09-05</td>
-                <td>Female</td>
-                <td>
-                <span class="status pink"></span>
-                progress
+                <td><img src=image/$row[picture] alt='Cinque Terre' width='30' height='30'></td>                
+                <td class = 'action'>
+                <a class = 'edit' href ='edit.php?id=$row[id]'>edit</a>&nbsp; &nbsp; 
+                <a class = 'delete' href ='delete.php?id=$row[id]'>Delete</a>
                 </td>
-                <td><img class="animal_image" src="image/cheetah.jpg"  width="50px" height = "40px" alt=""></td>
-                <td><button class = "edit">Edit</button> 
-                &nbsp; &nbsp;&nbsp;<button class = "delete">Delete</button></td>
               </tr>
-              <tr class= "color">
-                <td>Baboon</td>
-                <td>2015-09-22</td>
-                <td>Female</td>
-                <td>
-                <span class="status orange"></span>
-                pending
-                </td>
-                <td><img class="animal_image" src="image/baboon.jpg"  width="50px" height = "40px" alt=""></td>
-                <td><button class = "edit">Edit</button> 
-                &nbsp; &nbsp;&nbsp;<button class = "delete">Delete</button></td>
-              </tr>
-              <tr>
-                <td>Python</td>
-                <td> 2011-03-23</td>
-                <td>Male</td>
-                <td>
-                <span class="status"></span>
-                review
-                </td>
-                <td><img class="animal_image" src="image/python1.jpg"  width="50px" height = "40px" alt=""></td>
-                <td><button class = "edit">Edit</button> 
-                &nbsp; &nbsp;&nbsp;<button class = "delete">Delete</button></td>
-              </tr>
+                ";
+                $count++;
+              }
+              ?>
+                               
             </tbody>
           </table>
           </div>

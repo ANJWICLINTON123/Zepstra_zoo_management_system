@@ -26,8 +26,8 @@ div.gallery {
     width: 24.99999%;
   }
 
-  .padding{
-    padding-bottom: 16%;
+  .arrange{
+    margin-top: 45%;
   }
   h1 .gallery_h1{
     color: #045f16;
@@ -37,11 +37,12 @@ div.gallery {
   
   @media only screen and (max-width: 700px) {
     .responsive {
-      width: 49.99999%;
+      width: 50%;
       margin: 6px 0;
     }
-    div.margin{
-      margin-bottom: 50%;
+
+    .arrange{
+      margin-top: 200%;
     }
   }
   
@@ -49,7 +50,12 @@ div.gallery {
     .responsive {
       width: 100%;
     }
+
+   div.arrange{
+      margin-top: 550%;
+    }
   }
+
   
   .clearfix:after {
     content: "";
