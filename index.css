@@ -84,9 +84,6 @@ nav ul{
     margin: 0;
     padding: 0;
     width: 100%;
-   
-    /* margin-top: 0%; */
-    /* z-index: 0; */
 }
 ul .navbar-nav {
     position: sticky;
@@ -94,9 +91,17 @@ ul .navbar-nav {
 nav.navbar{
     background-color: #045f16;
     overflow: hidden;
-    position: static;
+    position: sticky;
     padding-top: -100px;
+    overflow-x:hidden;
    
+}
+
+/* ############# Sticky header ################# */
+
+nav {
+	position:sticky;
+	top:0;
 }
 /* ################### hamberga ############### */
 .open-side a.hamberga{
@@ -172,18 +177,36 @@ a.hamberga{
  }
 
  /* ################# sidebarLogin_button ################## */
- button.sidebarLogin_button{
-    float: right;
-    margin: 11px 8px 0 0;
-    padding: 10px 15px 10px 15px;
-    color:#fff;
-    font-size: 15px;
-    font-weight: 600;
-    background-color: #045010;
-    border-color:  #045010;
-    border-radius: 5px;
-    margin-right: 60%;
+ li a.login{
+    margin-right: 1%;
  }
+ a.login{
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 5px 7px 5px 7px;
+    background-color: #045010;
+    border: 1px solid black;
+ }
+
+ a.login:hover{
+    background-color: #07721c;
+ }
+
+
+ a.login1{
+    margin-left: 5%;
+    color: #fff;
+
+ }
+ a.login1{
+    margin-top: 10px;
+    border-left:  5px solid #045010;
+ }
+
+ a.login1:hover{
+    border-left:  5px solid #fff;
+ }
+
  /*############## background image #######################*/
 div.background_image{
     background-image: url("image/bg1.jpg");
@@ -303,7 +326,7 @@ footer.container_footer{
 }
 .Our_footer h1{
     color: #045f16;
-    margin-right: 6%;
+    margin-right: 13%;
 }
 .Our_footer p{
   line-height: 25px;
@@ -327,14 +350,18 @@ footer.container_footer{
   margin-left: 11%;
   text-align: left;
 }
+
+.arrange1 h1{
+    margin-right: 5%;
+}
 .arrange2 h1{
-    margin-right: 35%;
+    margin-right: 30%;
 }
 .arrange1 p{
-    margin-left: 18%;
+    margin-left: 22%;
 }
 .arrange3 h1{
-    margin-right: 18%;
+    margin-right: 30%;
 }
 
 .info p{
@@ -344,6 +371,13 @@ footer.container_footer{
     text-align: center;
     padding: 10px;
 }
+
+.contact_footer{
+    margin-top: 2rem;
+    margin-right: 15rem;
+    word-spacing: 2rem;
+}
+
 /*############## modile view #######################*/
 
 @media screen and (max-width: 680px) {
@@ -434,9 +468,18 @@ img.zoopic{
 }
 
 /*############## Footer #######################*/
+
+
+.contact_footer{
+    margin-left: 1rem;
+    word-spacing: 1rem;
+    margin-bottom: 2px;
+}
+
+
 .Our_footer h1{
     font-size: 20px;
-    margin-right: -4%;
+    margin-right: 3%;
 }
 .Our_footer p{
   line-height: 25px;
@@ -446,10 +489,10 @@ img.zoopic{
 
 .Our_footer1 h1{
     font-size: 20px;
-    margin-right: 50%;
+    margin-right: 55%;
 }
 .Our_footer1 h3{
-    margin-right: 30%;
+    margin-right: 35%;
 }
 
 .Our_footer1 p{
@@ -458,18 +501,18 @@ img.zoopic{
   text-align: left;
 }
 .arrange1 h1{
-    margin-right: 45%;
-}
-.arrange1 p{
-    margin-left: 10%;
+    margin-right: 47%;
 }
 .arrange2 h1{
     margin-right: 40%;
 }
 .arrange3 h1{
-    margin-right: 60%;
+    margin-right: 58%;
+}
+.arrange2 h1{
+    margin-right: 42%;
 }
 .arrange1 p{
-    margin-left: 10%;
+    margin-left: 11%;
 }
 }

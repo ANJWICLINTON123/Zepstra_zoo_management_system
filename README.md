@@ -1,6 +1,7 @@
-# Zepstra_zoo_management_system
-For an internship
+# Zoo_management_System
+For internship
  
+ <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap-grid.min.css">
 
 
-  /*My project needs bootstrap.grid.min.css*/ and /*bootstrap-4.6.1-dist/js/bootstrap.min.js*/
+ /* is needed locally */

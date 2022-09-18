@@ -1,0 +1,61 @@
+body{
+    background-color: rgb(235, 240, 245);  
+}
+
+h1.Header{
+    color:  #045f16;
+    margin-left: 20px;
+    text-decoration: underline;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+h1.Header2{
+    float: left;
+margin-top: 4%;
+ margin-bottom: 7%;
+}
+img.EventImage{
+    margin-right: 300%;
+}
+
+.Container_Events p{
+    text-align: left;
+    line-height: 22px;
+}
+
+div.Containerbg{
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgb(106, 108, 109);
+}
+
+
+
+@media screen and (max-width: 680px) {
+   
+h1.Header{
+    margin-left: 40px;
+    margin-top: 13%;
+}
+h1.Header2{
+font-size: 27px;
+margin-left: 8%;
+margin-top: 4%;
+margin-bottom: 12%;
+}
+img.EventImage{
+    margin-right: 30%;
+}
+
+.Container_Events p{
+    text-align: left;
+    line-height: 22px;
+    margin-left: 7%;
+}
+div.Containerbg{
+    margin-top: 10%;
+    margin-left: 5%;
+    padding-top: 9%;
+}
+}

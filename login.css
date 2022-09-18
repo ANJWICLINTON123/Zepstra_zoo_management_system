@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    background-color: white;
+    margin-top: 3%;
+  }
+  .container h1{
+    color: #045f16;;
+  }
+  /* Full-width input fields */
+  input[type=text], input[type=password], input[type=date]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus, input[type=date]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+
+select.selected{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+ border-radius: 7px;
+  background: #f1f1f1;
+  border: none;
+}
+
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+button.adminlogin{
+  background-color: #045f16;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  margin-left: 12%;
+  color: #FFF;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: -3%;
+}
+
+  /* Set a style for the submit button */
+  .registerbtn {
+    background-color: #045f16;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  .error {color: #FF0000;}
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+
+  textarea.textarea{
+    width: 100%;
+    padding: 25px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=file]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+  }
+  
+  input[type=submit].forms{
+    width: 100%;
+    padding: 15px;
+    color: #FFF;
+    background-color: #045f16;
+    border: none;
+    border-radius: 7px;
+  }
+
+  @media screen and (max-width: 680px) {
+    button.adminlogin{
+      margin-left: 80%;
+      margin-bottom: 1%;
+    }
+    
+  }

@@ -1,0 +1,29 @@
+img.image1{
+    margin-top: 3rem;
+    margin-right: 30rem;
+}
+
+.details{
+    text-align: left;
+   margin-right: 5rem;
+}
+
+.col-sm-7{
+    position: none;
+}
+
+/*############## modile view #######################*/
+
+@media screen and (max-width: 680px) {
+    img.image1{
+        margin-top: 3rem;
+        margin-left: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .details{
+        text-align: left;
+       margin-left: 3rem;
+    }
+    
+}
